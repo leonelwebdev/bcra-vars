@@ -38,8 +38,14 @@ $vars = json_decode($getVars);
         <option value="10">Tasas de interés de las operaciones de pase pasivas</option>
       </select>
 
-      <button class="p-3 bg-black shadow-md text-white" type="submit">Buscar</button>
+      <button class="p-3 bg-black shadow-md text-white" id="submitButton" type="submit">Buscar</button>
     </form>
+    
+      <div class="flex gap-2 justify-center p-5" id="loader">
+        <div class="w-5 h-5 rounded-full animate-pulse bg-black"></div>
+        <div class="w-5 h-5 rounded-full animate-pulse bg-black"></div>
+        <div class="w-5 h-5 rounded-full animate-pulse bg-black"></div>
+      </div>
 
     <?php
 
@@ -87,6 +93,8 @@ $vars = json_decode($getVars);
 
         echo "</ul>";
       }
+
+      echo '<script>document.getElementById("loader").style.display = "none";</script>';
     }
 
     ?>
@@ -121,3 +129,9 @@ $vars = json_decode($getVars);
     color: #000;
   } */
 </style>
+
+<script>
+  document.getElementById("submitButton").addEventListener('click', () => {
+    document.getElementById("loader").style.display = "flex";
+  })
+</script>
