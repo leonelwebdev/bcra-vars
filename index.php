@@ -26,8 +26,8 @@ $vars = json_decode($getVars);
     <form class="flex justify-center py-3 max-sm:m-auto max-sm:mb-5" action="" method="post">
       <input class="border shadow-md text-center" type="date" name="desde" id="desde" required>
 
-      <select class="border shadow-md max-sm:w-[60%]" name="var" id="var" max=<?=date("Y-m-d")?> required>
-        <option value="empty">Selecciona una variable</option>
+      <select class="border shadow-md max-sm:w-[60%]" name="var" id="var" max="<?php echo date('Y-m-d'); ?>" required>
+        <option value="empty" selected hidden>Selecciona una variable</option>
         <option value="1">Reservas Internacionales</option>
         <option value="4">Tipo de Cambio Minorista</option>
         <option value="5">Tipo de Cambio Mayorista</option>
