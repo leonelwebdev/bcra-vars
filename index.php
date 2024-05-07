@@ -41,7 +41,7 @@ $vars = json_decode($getVars);
       <button class="p-3 bg-black shadow-md text-white" id="submitButton" type="submit">Buscar</button>
     </form>
     
-      <div class="flex gap-2 justify-center p-5" id="loader">
+      <div class="flex gap-2 justify-center p-5 hidden" id="loader">
         <div class="w-5 h-5 rounded-full animate-pulse bg-black"></div>
         <div class="w-5 h-5 rounded-full animate-pulse bg-black"></div>
         <div class="w-5 h-5 rounded-full animate-pulse bg-black"></div>
